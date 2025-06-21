@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SoftwareRouteImport } from './routes/software'
 import { Route as PublicationsRouteImport } from './routes/publications'
 import { Route as OrientacoesRouteImport } from './routes/orientacoes'
-import { Route as DisciplinasRouteImport } from './routes/disciplinas'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -31,11 +30,6 @@ const OrientacoesRoute = OrientacoesRouteImport.update({
   path: '/orientacoes',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DisciplinasRoute = DisciplinasRouteImport.update({
-  id: '/disciplinas',
-  path: '/disciplinas',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -50,7 +44,6 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/disciplinas': typeof DisciplinasRoute
   '/orientacoes': typeof OrientacoesRoute
   '/publications': typeof PublicationsRoute
   '/software': typeof SoftwareRoute
@@ -58,7 +51,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/disciplinas': typeof DisciplinasRoute
   '/orientacoes': typeof OrientacoesRoute
   '/publications': typeof PublicationsRoute
   '/software': typeof SoftwareRoute
@@ -67,33 +59,19 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/disciplinas': typeof DisciplinasRoute
   '/orientacoes': typeof OrientacoesRoute
   '/publications': typeof PublicationsRoute
   '/software': typeof SoftwareRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/about'
-    | '/disciplinas'
-    | '/orientacoes'
-    | '/publications'
-    | '/software'
+  fullPaths: '/' | '/about' | '/orientacoes' | '/publications' | '/software'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/about'
-    | '/disciplinas'
-    | '/orientacoes'
-    | '/publications'
-    | '/software'
+  to: '/' | '/about' | '/orientacoes' | '/publications' | '/software'
   id:
     | '__root__'
     | '/'
     | '/about'
-    | '/disciplinas'
     | '/orientacoes'
     | '/publications'
     | '/software'
@@ -102,7 +80,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  DisciplinasRoute: typeof DisciplinasRoute
   OrientacoesRoute: typeof OrientacoesRoute
   PublicationsRoute: typeof PublicationsRoute
   SoftwareRoute: typeof SoftwareRoute
@@ -131,13 +108,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OrientacoesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/disciplinas': {
-      id: '/disciplinas'
-      path: '/disciplinas'
-      fullPath: '/disciplinas'
-      preLoaderRoute: typeof DisciplinasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -158,7 +128,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  DisciplinasRoute: DisciplinasRoute,
   OrientacoesRoute: OrientacoesRoute,
   PublicationsRoute: PublicationsRoute,
   SoftwareRoute: SoftwareRoute,

@@ -1,17 +1,19 @@
-import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
+import { createRootRoute, Link, Outlet, useRouterState } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 function RootComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = useRouterState({ select: (s) => s.location.pathname })
+  const isHomePage = pathname === '/'
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
   return (
-    <>
+    <div className={isHomePage ? 'h-screen overflow-y-hidden' : ''}>
       <header className="bg-black text-white relative">
         <div className="container mx-auto flex items-center justify-between p-4">
           <div className="flex items-center gap-2">
@@ -54,13 +56,6 @@ function RootComponent() {
                 Início
               </Link>
               <Link
-                to="/disciplinas"
-                className="text-gray-300 hover:text-white w-full p-2 rounded-md"
-                onClick={toggleMenu}
-              >
-                Disciplinas
-              </Link>
-              <Link
                 to="/orientacoes"
                 className="text-gray-300 hover:text-white w-full p-2 rounded-md"
                 onClick={toggleMenu}
@@ -96,7 +91,7 @@ function RootComponent() {
       </header>
       <Outlet />
       <TanStackRouterDevtools />
-    </>
+    </div>
   )
 }
 
