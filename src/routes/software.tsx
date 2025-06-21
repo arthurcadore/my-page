@@ -187,7 +187,7 @@ function Software() {
   return (
     <div className="container mx-auto p-8">
       <main>
-        <h1 className="text-4xl font-light text-green-700 mb-12">Software</h1>
+        <h1 className="text-4xl font-light text-gray-900 mb-12">Software</h1>
 
         <section className="mb-16">
           <h2 className="text-3xl font-light mb-8">Academicos</h2>

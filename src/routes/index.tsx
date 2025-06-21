@@ -14,17 +14,17 @@ export function Index() {
           <div className="max-w-5xl mx-auto px-8">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
               <div className="md:w-3/5 space-y-4 text-center md:text-left">
-                <h1 className="text-4xl font-light text-green-700">
+                <h1 className="text-4xl font-light text-gray-900">
                   Arthur Cadore M. Barcella
                 </h1>
-                <h2 className="text-2xl font-semibold text-green-700">
+                <h2 className="text-2xl font-semibold text-gray-900">
                   Engenheiro de Telecomunicações
                 </h2>
                 <div className="text-gray-600">
                   <p className="font-bold">IFSC - Câmpus São José</p>
                   <p>São José, Santa Catarina, 88103-310</p>
                 </div>
-                <div className="flex items-center justify-center md:justify-start gap-2 text-green-700">
+                <div className="flex items-center justify-center md:justify-start gap-2 text-gray-900">
                   <Mail size={20} />
                   <a
                     href="mailto:arthurbarcella.ifsc@gmail.com"
@@ -33,7 +33,7 @@ export function Index() {
                     arthurbarcella.ifsc@gmail.com
                   </a>
                 </div>
-                <div className="flex items-center justify-center md:justify-start gap-2 text-green-700">
+                <div className="flex items-center justify-center md:justify-start gap-2 text-gray-900">
                   <Phone size={20} />
                   <span>+55 48 99615-6272</span>
                 </div>
@@ -85,7 +85,7 @@ export function Index() {
         <div className="max-w-5xl mx-auto px-8 py-16">
           <section className="grid md:grid-cols-2 gap-12 text-gray-700">
             <div>
-              <h2 className="text-3xl font-light text-green-700 mb-6">
+              <h2 className="text-3xl font-light text-gray-900 mb-6">
                 Experiência Profissional
               </h2>
               <ul className="space-y-4">
@@ -113,7 +113,7 @@ export function Index() {
               </ul>
             </div>
             <div>
-              <h2 className="text-3xl font-light text-green-700 mb-6">
+              <h2 className="text-3xl font-light text-gray-900 mb-6">
                 Experiência Acadêmica
               </h2>
               <ul className="space-y-4">

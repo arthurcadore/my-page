@@ -14,14 +14,14 @@ function RootComponent() {
 
   return (
     <div className={isHomePage ? 'h-screen overflow-y-hidden' : ''}>
-      <header className="bg-black text-white relative">
+      <header className="bg-gray-900 text-white relative">
         <div className="container mx-auto flex items-center justify-between p-4">
           <div className="flex items-center gap-2">
-            {/* <div className="w-4 h-4 bg-green-500"></div> */}
+            <div className="w-4 h-4 bg-gray-900"></div>
             <Link to="/" className="text-xl font-bold">
               Arthur Cadore M. Barcella
-        </Link>
-      </div>
+            </Link>
+          </div>
           <nav className="hidden md:flex gap-4 items-center">
             <Link
               to="/"
