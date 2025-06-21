@@ -56,35 +56,12 @@ function RootComponent() {
                 Início
               </Link>
               <Link
-                to="/orientacoes"
-                className="text-gray-300 hover:text-white w-full p-2 rounded-md"
-                onClick={toggleMenu}
-              >
-                Orientações
-              </Link>
-              <Link
-                to="/publications"
-                className="text-gray-300 hover:text-white w-full p-2 rounded-md"
-                onClick={toggleMenu}
-              >
-                Publications
-              </Link>
-              <Link
                 to="/software"
                 className="text-gray-300 hover:text-white w-full p-2 rounded-md"
                 onClick={toggleMenu}
               >
                 Software
               </Link>
-              <a
-                href="https://www.ifsc.edu.br/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white w-full p-2 rounded-md"
-                onClick={toggleMenu}
-              >
-                Portal do IFSC
-              </a>
             </nav>
           </div>
         )}
