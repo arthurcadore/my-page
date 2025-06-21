@@ -185,31 +185,36 @@ function Software() {
   }
 
   return (
-    <div className="container mx-auto p-8">
-      <main>
-        <h1 className="text-4xl font-light text-gray-900 mb-12">Software</h1>
+    <div className="font-serif">
+      <div className="bg-gray-100 shadow-md">
+        <div className="container mx-auto px-8 py-6">
+          <h1 className="text-4xl font-light text-gray-800">Software</h1>
+        </div>
+      </div>
+      <div className="container mx-auto px-8 py-8">
+        <main>
+          <section className="mb-16">
+            <h2 className="text-3xl font-light mb-8">Academicos</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {academicos.map(renderRepoCard)}
+            </div>
+          </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-light mb-8">Academicos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {academicos.map(renderRepoCard)}
-          </div>
-        </section>
+          <section className="mb-16">
+            <h2 className="text-3xl font-light mb-8">DevOps</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {devops.map(renderRepoCard)}
+            </div>
+          </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-light mb-8">DevOps</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {devops.map(renderRepoCard)}
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-light mb-8">Appliances</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {appliances.map(renderRepoCard)}
-          </div>
-        </section>
-      </main>
+          <section>
+            <h2 className="text-3xl font-light mb-8">Appliances</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {appliances.map(renderRepoCard)}
+            </div>
+          </section>
+        </main>
+      </div>
     </div>
   )
 }

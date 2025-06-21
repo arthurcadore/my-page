@@ -30,6 +30,12 @@ function RootComponent() {
               Início
             </Link>
             <Link
+              to="/estudos"
+              className="text-gray-300 hover:text-white [&.active]:text-white [&.active]:font-bold"
+            >
+              Estudos
+            </Link>
+            <Link
               to="/software"
               className="text-gray-300 hover:text-white [&.active]:text-white [&.active]:font-bold"
             >
@@ -54,6 +60,13 @@ function RootComponent() {
                 onClick={toggleMenu}
               >
                 Início
+              </Link>
+              <Link
+                to="/estudos"
+                className="text-gray-300 hover:text-white w-full p-2 rounded-md"
+                onClick={toggleMenu}
+              >
+                Estudos
               </Link>
               <Link
                 to="/software"

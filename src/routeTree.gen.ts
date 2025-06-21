@@ -13,8 +13,16 @@ import { Route as SoftwareRouteImport } from './routes/software'
 import { Route as PublicationsRouteImport } from './routes/publications'
 import { Route as OrientacoesRouteImport } from './routes/orientacoes'
 import { Route as MyPageRouteImport } from './routes/my-page'
+import { Route as EstudosRouteImport } from './routes/estudos'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EstudosIndexRouteImport } from './routes/estudos/index'
+import { Route as EstudosTransceptorAmRouteImport } from './routes/estudos/transceptor-am'
+import { Route as EstudosInversorTrifasicoRouteImport } from './routes/estudos/inversor-trifasico'
+import { Route as EstudosInfraestruturaComAnsibleRouteImport } from './routes/estudos/infraestrutura-com-ansible'
+import { Route as EstudosCncRouteImport } from './routes/estudos/cnc'
+import { Route as EstudosAnaliseDeTrafegoComNetflowRouteImport } from './routes/estudos/analise-de-trafego-com-netflow'
+import { Route as EstudosAnaliseDeRfRouteImport } from './routes/estudos/analise-de-rf'
 
 const SoftwareRoute = SoftwareRouteImport.update({
   id: '/software',
@@ -36,6 +44,11 @@ const MyPageRoute = MyPageRouteImport.update({
   path: '/my-page',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EstudosRoute = EstudosRouteImport.update({
+  id: '/estudos',
+  path: '/estudos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -46,14 +59,60 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EstudosIndexRoute = EstudosIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EstudosRoute,
+} as any)
+const EstudosTransceptorAmRoute = EstudosTransceptorAmRouteImport.update({
+  id: '/transceptor-am',
+  path: '/transceptor-am',
+  getParentRoute: () => EstudosRoute,
+} as any)
+const EstudosInversorTrifasicoRoute =
+  EstudosInversorTrifasicoRouteImport.update({
+    id: '/inversor-trifasico',
+    path: '/inversor-trifasico',
+    getParentRoute: () => EstudosRoute,
+  } as any)
+const EstudosInfraestruturaComAnsibleRoute =
+  EstudosInfraestruturaComAnsibleRouteImport.update({
+    id: '/infraestrutura-com-ansible',
+    path: '/infraestrutura-com-ansible',
+    getParentRoute: () => EstudosRoute,
+  } as any)
+const EstudosCncRoute = EstudosCncRouteImport.update({
+  id: '/cnc',
+  path: '/cnc',
+  getParentRoute: () => EstudosRoute,
+} as any)
+const EstudosAnaliseDeTrafegoComNetflowRoute =
+  EstudosAnaliseDeTrafegoComNetflowRouteImport.update({
+    id: '/analise-de-trafego-com-netflow',
+    path: '/analise-de-trafego-com-netflow',
+    getParentRoute: () => EstudosRoute,
+  } as any)
+const EstudosAnaliseDeRfRoute = EstudosAnaliseDeRfRouteImport.update({
+  id: '/analise-de-rf',
+  path: '/analise-de-rf',
+  getParentRoute: () => EstudosRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/estudos': typeof EstudosRouteWithChildren
   '/my-page': typeof MyPageRoute
   '/orientacoes': typeof OrientacoesRoute
   '/publications': typeof PublicationsRoute
   '/software': typeof SoftwareRoute
+  '/estudos/analise-de-rf': typeof EstudosAnaliseDeRfRoute
+  '/estudos/analise-de-trafego-com-netflow': typeof EstudosAnaliseDeTrafegoComNetflowRoute
+  '/estudos/cnc': typeof EstudosCncRoute
+  '/estudos/infraestrutura-com-ansible': typeof EstudosInfraestruturaComAnsibleRoute
+  '/estudos/inversor-trifasico': typeof EstudosInversorTrifasicoRoute
+  '/estudos/transceptor-am': typeof EstudosTransceptorAmRoute
+  '/estudos/': typeof EstudosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,25 +121,48 @@ export interface FileRoutesByTo {
   '/orientacoes': typeof OrientacoesRoute
   '/publications': typeof PublicationsRoute
   '/software': typeof SoftwareRoute
+  '/estudos/analise-de-rf': typeof EstudosAnaliseDeRfRoute
+  '/estudos/analise-de-trafego-com-netflow': typeof EstudosAnaliseDeTrafegoComNetflowRoute
+  '/estudos/cnc': typeof EstudosCncRoute
+  '/estudos/infraestrutura-com-ansible': typeof EstudosInfraestruturaComAnsibleRoute
+  '/estudos/inversor-trifasico': typeof EstudosInversorTrifasicoRoute
+  '/estudos/transceptor-am': typeof EstudosTransceptorAmRoute
+  '/estudos': typeof EstudosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/estudos': typeof EstudosRouteWithChildren
   '/my-page': typeof MyPageRoute
   '/orientacoes': typeof OrientacoesRoute
   '/publications': typeof PublicationsRoute
   '/software': typeof SoftwareRoute
+  '/estudos/analise-de-rf': typeof EstudosAnaliseDeRfRoute
+  '/estudos/analise-de-trafego-com-netflow': typeof EstudosAnaliseDeTrafegoComNetflowRoute
+  '/estudos/cnc': typeof EstudosCncRoute
+  '/estudos/infraestrutura-com-ansible': typeof EstudosInfraestruturaComAnsibleRoute
+  '/estudos/inversor-trifasico': typeof EstudosInversorTrifasicoRoute
+  '/estudos/transceptor-am': typeof EstudosTransceptorAmRoute
+  '/estudos/': typeof EstudosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/estudos'
     | '/my-page'
     | '/orientacoes'
     | '/publications'
     | '/software'
+    | '/estudos/analise-de-rf'
+    | '/estudos/analise-de-trafego-com-netflow'
+    | '/estudos/cnc'
+    | '/estudos/infraestrutura-com-ansible'
+    | '/estudos/inversor-trifasico'
+    | '/estudos/transceptor-am'
+    | '/estudos/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,19 +171,35 @@ export interface FileRouteTypes {
     | '/orientacoes'
     | '/publications'
     | '/software'
+    | '/estudos/analise-de-rf'
+    | '/estudos/analise-de-trafego-com-netflow'
+    | '/estudos/cnc'
+    | '/estudos/infraestrutura-com-ansible'
+    | '/estudos/inversor-trifasico'
+    | '/estudos/transceptor-am'
+    | '/estudos'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/estudos'
     | '/my-page'
     | '/orientacoes'
     | '/publications'
     | '/software'
+    | '/estudos/analise-de-rf'
+    | '/estudos/analise-de-trafego-com-netflow'
+    | '/estudos/cnc'
+    | '/estudos/infraestrutura-com-ansible'
+    | '/estudos/inversor-trifasico'
+    | '/estudos/transceptor-am'
+    | '/estudos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  EstudosRoute: typeof EstudosRouteWithChildren
   MyPageRoute: typeof MyPageRoute
   OrientacoesRoute: typeof OrientacoesRoute
   PublicationsRoute: typeof PublicationsRoute
@@ -138,6 +236,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MyPageRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/estudos': {
+      id: '/estudos'
+      path: '/estudos'
+      fullPath: '/estudos'
+      preLoaderRoute: typeof EstudosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -152,12 +257,86 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/estudos/': {
+      id: '/estudos/'
+      path: '/'
+      fullPath: '/estudos/'
+      preLoaderRoute: typeof EstudosIndexRouteImport
+      parentRoute: typeof EstudosRoute
+    }
+    '/estudos/transceptor-am': {
+      id: '/estudos/transceptor-am'
+      path: '/transceptor-am'
+      fullPath: '/estudos/transceptor-am'
+      preLoaderRoute: typeof EstudosTransceptorAmRouteImport
+      parentRoute: typeof EstudosRoute
+    }
+    '/estudos/inversor-trifasico': {
+      id: '/estudos/inversor-trifasico'
+      path: '/inversor-trifasico'
+      fullPath: '/estudos/inversor-trifasico'
+      preLoaderRoute: typeof EstudosInversorTrifasicoRouteImport
+      parentRoute: typeof EstudosRoute
+    }
+    '/estudos/infraestrutura-com-ansible': {
+      id: '/estudos/infraestrutura-com-ansible'
+      path: '/infraestrutura-com-ansible'
+      fullPath: '/estudos/infraestrutura-com-ansible'
+      preLoaderRoute: typeof EstudosInfraestruturaComAnsibleRouteImport
+      parentRoute: typeof EstudosRoute
+    }
+    '/estudos/cnc': {
+      id: '/estudos/cnc'
+      path: '/cnc'
+      fullPath: '/estudos/cnc'
+      preLoaderRoute: typeof EstudosCncRouteImport
+      parentRoute: typeof EstudosRoute
+    }
+    '/estudos/analise-de-trafego-com-netflow': {
+      id: '/estudos/analise-de-trafego-com-netflow'
+      path: '/analise-de-trafego-com-netflow'
+      fullPath: '/estudos/analise-de-trafego-com-netflow'
+      preLoaderRoute: typeof EstudosAnaliseDeTrafegoComNetflowRouteImport
+      parentRoute: typeof EstudosRoute
+    }
+    '/estudos/analise-de-rf': {
+      id: '/estudos/analise-de-rf'
+      path: '/analise-de-rf'
+      fullPath: '/estudos/analise-de-rf'
+      preLoaderRoute: typeof EstudosAnaliseDeRfRouteImport
+      parentRoute: typeof EstudosRoute
+    }
   }
 }
+
+interface EstudosRouteChildren {
+  EstudosAnaliseDeRfRoute: typeof EstudosAnaliseDeRfRoute
+  EstudosAnaliseDeTrafegoComNetflowRoute: typeof EstudosAnaliseDeTrafegoComNetflowRoute
+  EstudosCncRoute: typeof EstudosCncRoute
+  EstudosInfraestruturaComAnsibleRoute: typeof EstudosInfraestruturaComAnsibleRoute
+  EstudosInversorTrifasicoRoute: typeof EstudosInversorTrifasicoRoute
+  EstudosTransceptorAmRoute: typeof EstudosTransceptorAmRoute
+  EstudosIndexRoute: typeof EstudosIndexRoute
+}
+
+const EstudosRouteChildren: EstudosRouteChildren = {
+  EstudosAnaliseDeRfRoute: EstudosAnaliseDeRfRoute,
+  EstudosAnaliseDeTrafegoComNetflowRoute:
+    EstudosAnaliseDeTrafegoComNetflowRoute,
+  EstudosCncRoute: EstudosCncRoute,
+  EstudosInfraestruturaComAnsibleRoute: EstudosInfraestruturaComAnsibleRoute,
+  EstudosInversorTrifasicoRoute: EstudosInversorTrifasicoRoute,
+  EstudosTransceptorAmRoute: EstudosTransceptorAmRoute,
+  EstudosIndexRoute: EstudosIndexRoute,
+}
+
+const EstudosRouteWithChildren =
+  EstudosRoute._addFileChildren(EstudosRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  EstudosRoute: EstudosRouteWithChildren,
   MyPageRoute: MyPageRoute,
   OrientacoesRoute: OrientacoesRoute,
   PublicationsRoute: PublicationsRoute,

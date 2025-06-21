@@ -8,7 +8,7 @@ export const Route = createFileRoute('/')({
 
 export function Index() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden font-serif">
       <main>
         <section className="bg-gray-100 py-16">
           <div className="max-w-5xl mx-auto px-8">
