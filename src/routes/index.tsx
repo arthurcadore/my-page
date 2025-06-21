@@ -105,6 +105,13 @@ export function Index() {
                 </li>
                 <li>
                   <p className="font-semibold">
+                    Analista de Redes e Infraestrutura - Suporte Técnico,
+                    Intelbras
+                  </p>
+                  <p className="text-sm text-gray-600">2020 - 2021</p>
+                </li>
+                <li>
+                  <p className="font-semibold">
                     Estagiário em Projetos de Fibra Óptica e Orçamento em Redes
                     PON, Flin ISP
                   </p>
