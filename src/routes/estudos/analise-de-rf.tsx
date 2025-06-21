@@ -6,7 +6,6 @@ export const Route = createFileRoute('/estudos/analise-de-rf')({
 })
 
 function AnaliseDeRf() {
-  const contentOffset = 'ml-[calc(2.5rem+1.5rem)]' // w-10 (botão) + ml-6 (título)
 
   return (
     <div className="font-serif">
