@@ -6,7 +6,7 @@ export const Route = createFileRoute('/')({
   component: Index,
 })
 
-function Index() {
+export function Index() {
   return (
     <div className="overflow-x-hidden">
       <main>

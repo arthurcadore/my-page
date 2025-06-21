@@ -20,5 +20,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/arthurcadore.github.io'
+  base: '/my-page/'
 })

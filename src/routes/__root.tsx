@@ -6,7 +6,7 @@ import { Menu, X } from 'lucide-react'
 function RootComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = useRouterState({ select: (s) => s.location.pathname })
-  const isHomePage = pathname === '/'
+  const isHomePage = pathname === '/' || pathname === '/my-page'
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -20,8 +20,8 @@ function RootComponent() {
             {/* <div className="w-4 h-4 bg-green-500"></div> */}
             <Link to="/" className="text-xl font-bold">
               Arthur Cadore M. Barcella
-            </Link>
-          </div>
+        </Link>
+      </div>
           <nav className="hidden md:flex gap-4 items-center">
             <Link
               to="/"
