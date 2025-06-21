@@ -18,6 +18,11 @@ install-shadcn:
 	@bunx --bun shadcn@latest init
 	@bunx --bun shadcn@latest add button
 
+install-tanstack:
+	@echo "Installing TanStack Query..."
+	@bun add @tanstack/react-router @tanstack/react-router-devtools
+	@bun add -D @tanstack/router-plugin
+
 build:
 	@echo "Building the project..."
 	@bun run build
