@@ -48,7 +48,7 @@ export function Index() {
               <div className="md:w-2/5 flex flex-col items-center gap-4">
                 <img
                   src={profilePic}
-                  alt="Prof. Roberto W. Nóbrega"
+                  alt="Arthur Cadore M. Barcella"
                   className="rounded-lg shadow-md w-full"
                 />
                 <div className="flex justify-center gap-4 mt-4">
