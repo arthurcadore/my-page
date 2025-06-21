@@ -25,14 +25,19 @@ function Software() {
       description: 'A repository for personal and utility scripts.',
       url: 'https://github.com/arthurcadore/my-scripts',
     },
-  ]
-
-  const devops = [
     {
       title: 'network-captures',
       description: 'Repository for network capture files and analysis.',
       url: 'https://github.com/arthurcadore/network-captures',
     },
+    {
+      title: 'wireshark-dissector-plugins',
+      description: 'Custom Wireshark dissector plugins.',
+      url: 'https://github.com/arthurcadore/wireshark-dissector-plugins',
+    },
+  ]
+
+  const devops = [
     {
       title: 'ansible-comware',
       description: 'Ansible scripts for HPE Comware devices.',
@@ -69,11 +74,6 @@ function Software() {
       title: 'monitoring-templates',
       description: 'Templates for monitoring systems like Zabbix or Grafana.',
       url: 'https://github.com/arthurcadore/monitoring-templates',
-    },
-    {
-      title: 'wireshark-dissector-plugins',
-      description: 'Custom Wireshark dissector plugins.',
-      url: 'https://github.com/arthurcadore/wireshark-dissector-plugins',
     },
   ]
 
