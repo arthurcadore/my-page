@@ -1,5 +1,8 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 
+import amPlot from '../../../scripts/out/am.png'
+import heatmap from '../../../scripts/out/heatmap_overlay.png'
+
 export const Route = createFileRoute('/estudos/')({
   component: Estudos,
 })
@@ -8,7 +11,7 @@ function Estudos() {
   const redes = [
     {
       title: 'Análise de RF',
-      imageUrl: 'https://placehold.co/600x400/d1d5db/374151?text=Análise+de+RF',
+      imageUrl: heatmap,
       path: './analise-de-rf',
     },
     {
@@ -28,8 +31,7 @@ function Estudos() {
   const eletronica = [
     {
       title: 'Transceptor AM',
-      imageUrl:
-        'https://placehold.co/600x400/d1d5db/374151?text=Transceptor+AM',
+      imageUrl: amPlot,
       path: './transceptor-am',
     },
     {
@@ -53,10 +55,14 @@ function Estudos() {
     <Link
       to={item.path}
       key={item.title}
-      className="block relative rounded-lg overflow-hidden h-56 bg-cover bg-center group hover:shadow-xl transition-shadow duration-300"
-      style={{ backgroundImage: `url(${item.imageUrl})` }}
+      className="block relative rounded-lg overflow-hidden h-56 bg-gray-200 group hover:shadow-xl transition-shadow duration-300"
     >
-      <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-opacity" />
+      <img
+        src={item.imageUrl}
+        alt={item.title}
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+      />
+      {/* <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-opacity" /> */}
       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gray-900 bg-opacity-90">
         <h3 className="text-lg font-semibold text-white">{item.title}</h3>
       </div>

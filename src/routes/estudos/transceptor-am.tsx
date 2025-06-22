@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowLeft } from 'lucide-react'
+import { AmPlot } from '../../components/plots/AmPlot'
 
 export const Route = createFileRoute('/estudos/transceptor-am')({
   component: TransceptorAm,
@@ -23,7 +24,7 @@ function TransceptorAm() {
       </div>
       <div className="container mx-auto px-8 py-8">
         <div className="ml-[calc(2.5rem+1.5rem)] mr-[calc(2.5rem+1.5rem)]">
-          <p className="text-lg text-gray-700">Página em construção...</p>
+          <AmPlot />
         </div>
       </div>
     </div>
