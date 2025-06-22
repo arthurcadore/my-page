@@ -2,4 +2,5 @@ opencv-python
 numpy
 matplotlib
 scikit-image
-tqdm 
+tqdm
+scienceplots 

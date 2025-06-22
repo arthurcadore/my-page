@@ -20,8 +20,8 @@ function RootComponent() {
             <div className="w-4 h-4 bg-gray-900"></div>
             <Link to="/" className="text-xl font-bold">
               Arthur Cadore M. Barcella
-            </Link>
-          </div>
+        </Link>
+      </div>
           <nav className="hidden md:flex gap-4 items-center">
             <Link
               to="/"

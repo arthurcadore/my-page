@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 
-import amPlot from '../../../scripts/out/am.png'
-import heatmap from '../../../scripts/out/heatmap_overlay.png'
+import amPlot from '../../assets/am.png' 
+import heatmap from '../../assets/heatmap_overlay.png'
 
 export const Route = createFileRoute('/estudos/')({
   component: Estudos,
@@ -10,7 +10,7 @@ export const Route = createFileRoute('/estudos/')({
 function Estudos() {
   const redes = [
     {
-      title: 'Análise de RF',
+      title: 'Heatmap em Ambientes Internos',
       imageUrl: heatmap,
       path: './analise-de-rf',
     },
