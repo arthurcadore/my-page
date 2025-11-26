@@ -2,9 +2,13 @@ all: run
 
 install: install-vite install-tailwind install-shadcn
 
+install-bun:
+	@echo "Installing Bun..."
+	@curl -fsSL https://bun.sh/install | bash
+
 install-vite:
 	@echo "Installing Vite with React and TypeScript..."
-	@bun create vite . --template react-ts
+	@bun add -D vit
 	@install
 
 install-tailwind:

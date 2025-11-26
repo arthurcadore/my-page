@@ -27,19 +27,19 @@ function RootComponent() {
               to="/"
               className="text-gray-300 hover:text-white [&.active]:text-white [&.active]:font-bold"
             >
-              Início
+              Init
             </Link>
             <Link
               to="/estudos"
               className="text-gray-300 hover:text-white [&.active]:text-white [&.active]:font-bold"
             >
-              Estudos
+              Projects
             </Link>
             <Link
               to="/software"
               className="text-gray-300 hover:text-white [&.active]:text-white [&.active]:font-bold"
             >
-              Software
+              Repositories
             </Link>
           </nav>
           <div className="md:hidden">
@@ -59,14 +59,14 @@ function RootComponent() {
                 className="text-gray-300 hover:text-white w-full p-2 rounded-md"
                 onClick={toggleMenu}
               >
-                Início
+                Init
               </Link>
               <Link
                 to="/estudos"
                 className="text-gray-300 hover:text-white w-full p-2 rounded-md"
                 onClick={toggleMenu}
               >
-                Estudos
+                Projects
               </Link>
               <Link
                 to="/software"

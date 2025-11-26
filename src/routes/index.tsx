@@ -1,6 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Github, Mail, Phone, Linkedin, BookUser } from 'lucide-react'
 import profilePic from '../assets/3x4.png'
+import intelbrasLogo from '../assets/intelbras.jpg'
+import flinLogo from '../assets/flin.webp'
+import itaLogo from '../assets/ita.png'
+import ifscLogo from '../assets/ifsc.png'
+
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -18,11 +23,11 @@ export function Index() {
                   Arthur Cadore M. Barcella
                 </h1>
                 <h2 className="text-2xl font-semibold text-gray-900">
-                  Engenheiro de Telecomunicações
+                  Telecommunications Engineer
                 </h2>
                 <div className="text-gray-600">
-                  <p className="font-bold">IFSC - Câmpus São José</p>
-                  <p>São José, Santa Catarina, 88103-310</p>
+                  <p className="font-bold">IFSC, São José</p>
+                  <p>São José, SC, Brasil - 88103-310</p>
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-2 text-gray-900">
                   <Mail size={20} />
@@ -39,9 +44,7 @@ export function Index() {
                 </div>
 
                 <p className="pt-8 text-gray-700 text-justify">
-                  Com formação técnica em Telecomunicações e cursando Engenharia
-                  de Telecomunicações, desenvolvi uma carreira focada em redes e
-                  sistemas. Recentemente venho estudando sobre desenvolvimento de firmwares para sistemas embarcados e também em infraestrutura para aplicações em nuvem com uso de containers em Kubernetes.
+                  With a technical background in Telecommunications and currently pursuing a degree in Telecommunications Engineering, I have built a career focused on networking and telecomunication systems. Recently, I have been studying firmware development for embedded systems, as well as cloud application infrastructure using containerized environments and Kubernetes.
                 </p>
               </div>
 
@@ -86,57 +89,83 @@ export function Index() {
           <section className="grid md:grid-cols-2 gap-12 text-gray-700">
             <div>
               <h2 className="text-3xl font-light text-gray-900 mb-6">
-                Experiência Profissional
+                Professional Background
               </h2>
-              <ul className="space-y-4">
-                <li>
-                  <p className="font-semibold">
-                    Analista de Desenvolvimento de Produto - PeD Redes
-                    Empresariais, Intelbras
-                  </p>
-                  <p className="text-sm text-gray-600">2024 - O momento</p>
-                </li>
-                <li>
-                  <p className="font-semibold">
-                    Analista de Capacitação em Redes - Suporte Técnico,
-                    Intelbras
-                  </p>
-                  <p className="text-sm text-gray-600">2021 - 2024</p>
-                </li>
-                <li>
-                  <p className="font-semibold">
-                    Analista de Redes e Infraestrutura - Suporte Técnico,
-                    Intelbras
-                  </p>
-                  <p className="text-sm text-gray-600">2020 - 2021</p>
-                </li>
-                <li>
-                  <p className="font-semibold">
-                    Estagiário em Projetos de Fibra Óptica e Orçamento em Redes
-                    PON, Flin ISP
-                  </p>
-                  <p className="text-sm text-gray-600">2017 - 2020</p>
-                </li>
-              </ul>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <img src={intelbrasLogo} className="w-10 h-10 object-contain" />
+                    <div>
+                      <p className="font-semibold">
+                        Product Development Analyst - Business Networks, Intelbras
+                      </p>
+                      <p className="text-sm text-gray-600">2024 - Present</p>
+                    </div>
+                  </li>
+
+                  <li className="flex items-start gap-4">
+                    <img src={intelbrasLogo} className="w-10 h-10 object-contain" />
+                    <div>
+                      <p className="font-semibold">
+                        Network Training Analyst - Technical Support, Intelbras
+                      </p>
+                      <p className="text-sm text-gray-600">2021 - 2024</p>
+                    </div>
+                  </li>
+
+                  <li className="flex items-start gap-4">
+                    <img src={intelbrasLogo} className="w-10 h-10 object-contain" />
+                    <div>
+                      <p className="font-semibold">
+                        Network and Infrastructure Analyst - Technical Support, Intelbras
+                      </p>
+                      <p className="text-sm text-gray-600">2020 - 2021</p>
+                    </div>
+                  </li>
+
+                  <li className="flex items-start gap-4">
+                    <img src={flinLogo} className="w-10 h-10 object-contain" />
+                    <div>
+                      <p className="font-semibold">
+                        Passive Fiber Optic Projects Intern, Flin (ISP)
+                      </p>
+                      <p className="text-sm text-gray-600">2017 - 2020</p>
+                    </div>
+                  </li>
+                </ul>
             </div>
             <div>
               <h2 className="text-3xl font-light text-gray-900 mb-6">
-                Experiência Acadêmica
+                Academic Background
               </h2>
-              <ul className="space-y-4">
-                <li>
-                  <p className="font-semibold">
-                    Bacharelado em Engenharia de Telecomunicações, Universidade
-                    Federal de Santa Catarina
-                  </p>
-                  <p className="text-sm text-gray-600">2020 - O momento</p>
+              <ul className="space-y-6">
+                <li className="flex items-start gap-4">
+                  <img src={itaLogo} className="w-10 h-10 object-contain" />
+                  <div>
+                    <p className="font-semibold">
+                      Master's Degree in Telecommunications (EEC-T), Aeronautics Institute of Technology (ITA)
+                    </p>
+                    <p className="text-sm text-gray-600">2026 - Present</p>
+                  </div>
                 </li>
-                <li>
-                  <p className="font-semibold">
-                    Técnico em Telecomunicações, Instituto Federal de Santa
-                    Catarina
-                  </p>
-                  <p className="text-sm text-gray-600">2017 - 2020</p>
+                
+                <li className="flex items-start gap-4">
+                  <img src={ifscLogo} className="w-10 h-10 object-contain" />
+                  <div>
+                    <p className="font-semibold">
+                      Bachelor's Degree in Telecommunications Engineering, Federal Institute of Santa Catarina (IFSC)
+                    </p>
+                    <p className="text-sm text-gray-600">2020 - 2025</p>
+                  </div>
+                </li>
+                
+                <li className="flex items-start gap-4">
+                  <img src={ifscLogo} className="w-10 h-10 object-contain" />
+                  <div>
+                    <p className="font-semibold">
+                      Technical Degree in Telecommunications – Federal Institute of Santa Catarina (IFSC)
+                    </p>
+                    <p className="text-sm text-gray-600">2017 - 2020</p>
+                  </div>
                 </li>
               </ul>
             </div>
