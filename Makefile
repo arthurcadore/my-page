@@ -40,3 +40,7 @@ clean:
 run:
 	@echo "Running the project..."
 	@bun run dev
+
+deploy: 
+	@echo "Deploying new version of page..."
+	@bun run deploy
