@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Github, Mail, Phone, Linkedin, BookUser } from 'lucide-react'
-import profilePic from '../assets/3x4.png'
+import profilePic from '../assets/1-1.png'
 import intelbrasLogo from '../assets/intelbras.jpg'
 import flinLogo from '../assets/flin.webp'
 import itaLogo from '../assets/ita.png'

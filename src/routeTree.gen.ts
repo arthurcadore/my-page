@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SoftwareRouteImport } from './routes/software'
 import { Route as PublicationsRouteImport } from './routes/publications'
-import { Route as OrientacoesRouteImport } from './routes/orientacoes'
 import { Route as MyPageRouteImport } from './routes/my-page'
 import { Route as EstudosRouteImport } from './routes/estudos'
 import { Route as AboutRouteImport } from './routes/about'
@@ -32,11 +31,6 @@ const SoftwareRoute = SoftwareRouteImport.update({
 const PublicationsRoute = PublicationsRouteImport.update({
   id: '/publications',
   path: '/publications',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OrientacoesRoute = OrientacoesRouteImport.update({
-  id: '/orientacoes',
-  path: '/orientacoes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MyPageRoute = MyPageRouteImport.update({
@@ -103,7 +97,6 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/estudos': typeof EstudosRouteWithChildren
   '/my-page': typeof MyPageRoute
-  '/orientacoes': typeof OrientacoesRoute
   '/publications': typeof PublicationsRoute
   '/software': typeof SoftwareRoute
   '/estudos/analise-de-rf': typeof EstudosAnaliseDeRfRoute
@@ -118,7 +111,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/my-page': typeof MyPageRoute
-  '/orientacoes': typeof OrientacoesRoute
   '/publications': typeof PublicationsRoute
   '/software': typeof SoftwareRoute
   '/estudos/analise-de-rf': typeof EstudosAnaliseDeRfRoute
@@ -135,7 +127,6 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/estudos': typeof EstudosRouteWithChildren
   '/my-page': typeof MyPageRoute
-  '/orientacoes': typeof OrientacoesRoute
   '/publications': typeof PublicationsRoute
   '/software': typeof SoftwareRoute
   '/estudos/analise-de-rf': typeof EstudosAnaliseDeRfRoute
@@ -153,7 +144,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/estudos'
     | '/my-page'
-    | '/orientacoes'
     | '/publications'
     | '/software'
     | '/estudos/analise-de-rf'
@@ -168,7 +158,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/my-page'
-    | '/orientacoes'
     | '/publications'
     | '/software'
     | '/estudos/analise-de-rf'
@@ -184,7 +173,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/estudos'
     | '/my-page'
-    | '/orientacoes'
     | '/publications'
     | '/software'
     | '/estudos/analise-de-rf'
@@ -201,7 +189,6 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   EstudosRoute: typeof EstudosRouteWithChildren
   MyPageRoute: typeof MyPageRoute
-  OrientacoesRoute: typeof OrientacoesRoute
   PublicationsRoute: typeof PublicationsRoute
   SoftwareRoute: typeof SoftwareRoute
 }
@@ -220,13 +207,6 @@ declare module '@tanstack/react-router' {
       path: '/publications'
       fullPath: '/publications'
       preLoaderRoute: typeof PublicationsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/orientacoes': {
-      id: '/orientacoes'
-      path: '/orientacoes'
-      fullPath: '/orientacoes'
-      preLoaderRoute: typeof OrientacoesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/my-page': {
@@ -338,7 +318,6 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   EstudosRoute: EstudosRouteWithChildren,
   MyPageRoute: MyPageRoute,
-  OrientacoesRoute: OrientacoesRoute,
   PublicationsRoute: PublicationsRoute,
   SoftwareRoute: SoftwareRoute,
 }
